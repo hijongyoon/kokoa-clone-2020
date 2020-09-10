@@ -1,0 +1,31 @@
+/* 여기서 부터 */
+.status-bar {
+  display: flex;
+  justify-content: center;
+  padding: 5px 3px;
+}
+
+.status-bar__column {
+  width: 33%;
+}
+
+/* 이 형태는 Notion css 9,10 참조. 이것은 tag tag 형태임 */
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* 여기 까지가 css hack(어떠한 것을 화면 중앙에 두는 것) */
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}

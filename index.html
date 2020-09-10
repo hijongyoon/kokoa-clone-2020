@@ -1,0 +1,47 @@
+<!-- index.html 이라고 하는 이유는 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정 되어 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- link:css 치면 이렇게 뜸 -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- 여기서 i는 icon 의 줄임말 -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:44</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <!-- 스크립트는 항상 마지막에 있어야함. body 태그를 닫기 직전에 있어야함 -->
+    <!-- 이 js 파일을 열어보면 이 파일이 우리의 html 이나 css에 styleesheet를 추가하는 것을 볼 수 있음 -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
