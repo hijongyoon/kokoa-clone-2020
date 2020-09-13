@@ -1,0 +1,61 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  /* 너비를 화면에서 60퍼센트만 쓴다는 의미 */
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* login-form 에 있는 input 중에서 type이 submit이 아닌 것에만 적용됨 */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  /* inherit 는 상속을 의미. 즉 여기서는 color로 부모의 색을 받는 다는 것을 의미.
+    여기서 부모는 login-form 이되고 상속 받는 대상이 되는 것은 a 가 됨. 여기서 a가 상속받는 색은 default 색인데 default 색은 black 임.*/
+  color: inherit;
+  font-size: 13px;
+}
