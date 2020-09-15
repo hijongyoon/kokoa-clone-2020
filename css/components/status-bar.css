@@ -1,11 +1,11 @@
 /* 여기서 부터 */
 .status-bar {
-  position: fixed;
+  /* position: fixed; */
   /* 여기서 position fixed 되면  width가 없어져 상태 바 요소들이 좀 이상하게 나열되는데 width:100% 해주면 잘됨. 꼭 해줘야 하는것 같음.
   width:100% 뿐만 아니라 left: 0 과 right: 0 을 해줘도 됨. */
   /* width: 100%; */
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   display: flex;
   justify-content: center;
   padding: 5px 3px;
