@@ -1,0 +1,56 @@
+.warning {
+  color: red;
+  margin-left: 5px;
+}
+
+.more-screen .icon-row {
+  margin-top: 30px;
+}
+
+.second-icon-row {
+  display: flex;
+  margin-top: 45px;
+  justify-content: space-between;
+}
+
+.last_icon {
+  visibility: hidden;
+}
+
+.more-suggestions {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+
+.more-suggestions__title {
+  margin-bottom: 30px;
+}
+
+.more-suggestions__icons {
+  display: flex;
+}
+
+.more-suggestions__icon {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-suggestions__icon-image {
+  width: 60px;
+  height: 60px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* 이모티콘은 이렇게 색상과 크기를 바꿀 수 있음. 왜냐하면 이모티콘은 단지 text뿐 이기 때문. */
+.more-suggestions__icon-image i {
+  font-size: 32px;
+  color: white;
+}
