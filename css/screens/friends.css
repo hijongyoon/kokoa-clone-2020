@@ -28,3 +28,31 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* hidden을 하더라도 html은 아직 남아 있음. 그래서 뭔가를 숨기거나 할 때는 이 기술을 사용하면 안됨. 이럴때 자바 스크립트가 필요 */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  /* vh는 화면 높이의 100%를 의미하는 것 100%와 다른 점은 100vh는 full height of viewport 이고 100%는 full height of parent tag 임.*/
+  width: 100vw;
+  /* 화면 넓이의 100%를 의미 */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 122px;
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  /* forwards는 마지막 속성 값을 애니메이션이 끝나고도 유지하는 것 */
+  animation-delay: 2s;
+}

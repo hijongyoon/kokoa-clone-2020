@@ -1,7 +1,7 @@
 #chat-screen {
   /* background-color: #abc1d1; */
   background-color: #fab7e9;
-  height: 11000vh;
+  height: 500vh;
 }
 
 #chat-screen .alt-header,
@@ -22,11 +22,23 @@
 }
 /* z-index는 layer 같은 것  absolute position 이나 fixed position 에 대해서 설정 가능.*/
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -102,4 +114,90 @@
 .message-row--own .message__info {
   /* message__info 가 이미 위에서 flex 였기에 가능 */
   flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 10px;
+  /* input이 있는 column에다가 width를 줘야 input이 width를 가질 수 있음 */
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply input:focus {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
